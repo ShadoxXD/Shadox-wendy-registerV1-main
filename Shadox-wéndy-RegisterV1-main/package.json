@@ -1,0 +1,16 @@
+{
+  "name": "shadox",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "author": "shadox",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "quick.db": "^7.1.3"
+  }
+}
