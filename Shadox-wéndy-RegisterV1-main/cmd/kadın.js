@@ -14,7 +14,9 @@ exports.run = async (client, message, args) => {
     let shadoxninbotundataglialimacik = await db.fetch(`talim.${message.guild.id}`)
     if(shadoxninbotundataglialimacik === true) {
         if(!member.user.username.includes(ayar.tag) && !member.roles.cache.has(ayar.vip) && !member.roles.cache.has(ayar.booster) && !member.roles.cache.has(ayar.sponsor)) return message.channel.send(embed.setDescription(`Sunucumuz **TAGLI ALIMDADIR** ve kullanıcıda tag bulunmuyor bu yüzden kullanıcıyı kayıt edemezsiniz.`)).then(x => x.delete({timeout: 5000}))}
-
+        
+const kadın = ayar.kadın
+const kadın2 = ayar.kadın2
 let nick = args[1] 
 let yas = args[2] 
 
@@ -31,7 +33,7 @@ if(member.id === message.author.id) return message.channel.send(embed.setDescrip
 db.add(`teyit.${message.author.id}`, 1)
 db.add(`kkayit.${message.author.id}`, 1)
 db.add(`kpuan.${message.author.id}`, 3)
-db.push(`isim.${message.guild.id}`, { userID: member.id, isim: nick, yas: yas, role: erkek.id, role2: erkek2.id, tag: ayar.tag }) 
+db.push(`isim.${message.guild.id}`, { userID: member.id, isim: nick, yas: yas, role: kadın.id, role2: kadın2.id, tag: ayar.tag }) 
 
 
 member.setNickname(`${ayar.tag} ${nick} | ${yas}`)

@@ -99,7 +99,9 @@ client.on('message', msg => {if (msg.content === '.Tag') {msg.channel.send(`\`${
         const shadoxdoguyor = moment.duration(tasaklibotcushadox).format(`\`YY [Yıl,] DD [Gün,] HH [Saat,] mm [Dakika,] ss [Saniye]\` `)
 
       moment.locale("tr");
-     
+      member.setNickname(`∘ İsim | Yaş`)
+     member.roles.add(ayarlar.unregister)
+     member.roles.add(ayarlar.unregister2)
       client.channels.cache.get(ayarlar.welcome).send(`
      <@`+ member +`> sunucumuza hoşgeldin! Hesabın `+shadoxdoguyor+` önce oluşturulmuş :tada:
     
